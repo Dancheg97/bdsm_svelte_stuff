@@ -2,7 +2,7 @@
 	import Button from './Button.svelte';
 
 	$: innerHeight = 0;
-	$: sideBarHeight = innerHeight - 12;
+	$: sideBarHeight = innerHeight - 16;
 	$: omitHeight = sideBarHeight - 268;
 
 	let userImg =
