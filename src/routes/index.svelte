@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	imoprt 
+</script>
+
+<button>Toggle</button>
+
+<style>
+	:global(body) {
+		background-color: #1d3040;
+		color: #bfc2c7;
+	}
+</style>
