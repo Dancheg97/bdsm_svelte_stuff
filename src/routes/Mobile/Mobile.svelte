@@ -1,22 +1,17 @@
 <script>
 	import Content from './Content/Content.svelte';
-	import accordion from './TopBar/accordion.js';
+	import accordion from './accordion.js';
+	import TopMenu from './TopBar/TopMenu.svelte';
 </script>
 
 <details use:accordion>
 	<summary>
-		<span>I'm an accordion, click me!</span>
+		<TopMenu />
 	</summary>
-	<div class="flex-container">
-		<Content />
-	</div>
+	<Content />
 </details>
 
 <style>
-	.flex-container {
-		display: flex;
-		flex-direction: column;
-	}
 	details {
 		background: #001c41;
 		height: var(--collapsed);
@@ -26,5 +21,12 @@
 	}
 	details[open] {
 		height: var(--expanded);
+	}
+	summary {
+		display: block;
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+		padding-inline-end: 0.5rem;
+		padding-inline-start: 1rem;
 	}
 </style>
