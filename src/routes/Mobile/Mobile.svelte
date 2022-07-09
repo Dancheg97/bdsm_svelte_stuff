@@ -10,6 +10,7 @@
 	</summary>
 	<Content />
 </details>
+<Content />
 
 <style>
 	details {
