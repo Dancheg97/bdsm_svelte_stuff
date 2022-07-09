@@ -2,13 +2,14 @@
 	import Content from './Content/Content.svelte';
 	import accordion from './accordion.js';
 	import TopMenu from './TopBar/TopMenu.svelte';
+	import TopList from './TopBar/TopList.svelte';
 </script>
 
 <details use:accordion>
 	<summary>
 		<TopMenu />
 	</summary>
-	<Content />
+	<TopList />
 </details>
 <Content />
 
