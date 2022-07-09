@@ -1,6 +1,6 @@
 <script>
-	import Content from '../Content/Content.svelte';
-	import SideBar from '../SideBar/SideBar.svelte';
+	import Content from './Content/Content.svelte';
+	import SideBar from './SideBar/SideBar.svelte';
 </script>
 
 <div class="flex-container">
