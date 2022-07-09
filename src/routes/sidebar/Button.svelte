@@ -5,7 +5,9 @@
 	}
 </script>
 
-<img {src} alt="" on:click={onClick} />
+<div>
+	<img {src} alt="" on:click={onClick} />
+</div>
 
 <style>
 	img {
@@ -13,5 +15,8 @@
 		width: 45px;
 		border-radius: 17px;
 		padding: 4px;
+	}
+	div {
+		padding: 5px;
 	}
 </style>

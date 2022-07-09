@@ -1,6 +1,10 @@
 <script>
 	import Button from './Button.svelte';
 
+	$: innerHeight = 0;
+	$: sideBarHeight = innerHeight - 12;
+	$: omitHeight = sideBarHeight - 268;
+
 	let userImg =
 		'https://thumbs.dreamstime.com/b/man-hipster-avatar-cartoon-guy-black-hair-man-hipster-avatar-cartoon-guy-black-hair-flat-icon-blue-background-user-223717055.jpg';
 	let homeImage = 'https://icon-library.com/images/white-home-icon-png/white-home-icon-png-21.jpg';
@@ -10,24 +14,14 @@
 	let exitImage = 'https://icon-library.com/images/logout-icon-png/logout-icon-png-13.jpg';
 </script>
 
-<div>
-	<ul>
-		<li>
-			<Button src={userImg} />
-		</li>
-		<hr />
-		<li>
-			<Button src={homeImage} />
-		</li>
-		<li>
-			<Button src={settingsImage} />
-		</li>
-		<div class="spacer" />
-		<hr />
-		<li>
-			<Button src={exitImage} />
-		</li>
-	</ul>
+<svelte:window bind:innerHeight />
+
+<div class="flex-container" style="--screen-height: {sideBarHeight}px">
+	<Button src={userImg} />
+	<Button src={homeImage} />
+	<Button src={settingsImage} />
+	<div class="spacer" style="--omit-height: {omitHeight}px" />
+	<Button src={exitImage} />
 </div>
 
 <style>
@@ -35,18 +29,9 @@
 		background-color: #001c41;
 		width: min-content;
 		border-radius: 17px;
+		height: var(--screen-height);
 	}
-	ul {
-		list-style-type: none;
-		margin: 0;
-		width: min-content;
-
-		padding-top: 10px;
-		padding-right: 10px;
-		padding-bottom: 10px;
-		padding-left: 10px;
-	}
-	div.spacer {
-		height: 100%;
+	.spacer {
+		height: var(--omit-height);
 	}
 </style>
