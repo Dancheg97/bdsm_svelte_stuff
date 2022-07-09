@@ -1,8 +1,8 @@
 <script>
-	imoprt 
+	import SideBar from './SideBar.svelte';
 </script>
 
-<button>Toggle</button>
+<SideBar />
 
 <style>
 	:global(body) {
