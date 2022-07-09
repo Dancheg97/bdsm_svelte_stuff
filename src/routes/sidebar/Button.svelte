@@ -5,8 +5,7 @@
 	}
 </script>
 
-<!-- svelte-ignore a11y-img-redundant-alt -->
-<img {src} alt="image is loading" on:click={onClick} />
+<img {src} alt="" on:click={onClick} />
 
 <style>
 	img {

@@ -10,27 +10,43 @@
 	let exitImage = 'https://icon-library.com/images/logout-icon-png/logout-icon-png-13.jpg';
 </script>
 
-<ul>
-	<li>
-		<Button src={userImg} />
-	</li>
-	<hr />
-	<li>
-		<Button src={homeImage} />
-	</li>
-	<li>
-		<Button src={settingsImage} />
-	</li>
-	<hr />
-	<li>
-		<Button src={exitImage} />
-	</li>
-</ul>
+<div>
+	<ul>
+		<li>
+			<Button src={userImg} />
+		</li>
+		<hr />
+		<li>
+			<Button src={homeImage} />
+		</li>
+		<li>
+			<Button src={settingsImage} />
+		</li>
+		<div class="spacer" />
+		<hr />
+		<li>
+			<Button src={exitImage} />
+		</li>
+	</ul>
+</div>
 
 <style>
+	div {
+		background-color: #001c41;
+		width: min-content;
+		border-radius: 17px;
+	}
 	ul {
 		list-style-type: none;
 		margin: 0;
-		padding: 0;
+		width: min-content;
+
+		padding-top: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+	div.spacer {
+		height: 100%;
 	}
 </style>
