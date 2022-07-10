@@ -13,5 +13,13 @@
 	<TopMenu onClick={fold} />
 	<Content />
 {:else}
-	<TopList onClick={fold} />
+	<div />
 {/if}
+
+<style>
+	div {
+		height: 100px;
+		width: 100px;
+		background-color: #001c41;
+	}
+</style>

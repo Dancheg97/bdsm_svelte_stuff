@@ -30,6 +30,7 @@
 		background-color: #001c41;
 		border-radius: 17px;
 		height: min-content;
+		margin: 8px;
 	}
 	.spacer {
 		width: var(--fill-width);

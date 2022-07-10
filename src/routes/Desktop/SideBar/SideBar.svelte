@@ -3,12 +3,11 @@
 
 	$: innerHeight = 0;
 	$: sideBarHeight = innerHeight - 16;
-	$: omitHeight = sideBarHeight - 268;
+	$: omitHeight = sideBarHeight - 282;
 
 	let userImg =
 		'https://thumbs.dreamstime.com/b/man-hipster-avatar-cartoon-guy-black-hair-man-hipster-avatar-cartoon-guy-black-hair-flat-icon-blue-background-user-223717055.jpg';
 	let homeImage = 'https://icon-library.com/images/white-home-icon-png/white-home-icon-png-21.jpg';
-
 	let settingsImage =
 		'https://icon-library.com/images/white-settings-icon/white-settings-icon-1.jpg';
 	let exitImage = 'https://icon-library.com/images/logout-icon-png/logout-icon-png-13.jpg';
@@ -30,6 +29,7 @@
 		width: min-content;
 		border-radius: 17px;
 		height: var(--screen-height);
+		margin: 8px;
 	}
 	.spacer {
 		height: var(--omit-height);

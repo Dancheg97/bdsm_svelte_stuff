@@ -7,18 +7,20 @@
 		'https://icon-library.com/images/white-settings-icon/white-settings-icon-1.jpg';
 	let exitImage = 'https://icon-library.com/images/logout-icon-png/logout-icon-png-13.jpg';
 	export let onClick;
+	$: innerHeight = 0;
 	$: innerWidth = 0;
 	$: fillWidth = innerWidth - 130;
 </script>
 
-<svelte:window bind:innerWidth />
-<body>
+<svelte:window bind:innerWidth bind:innerHeight />
+
+<body style="--inner-height: {innerHeight}">
 	<div class="flex-container">
 		<img src={userImage} alt="" />
 		<div class="spacer" style="--fill-width: {fillWidth}px" />
 		<img src={unfoldImage} alt="" on:click={onClick} />
 	</div>
-	<ul>
+	<!-- <ul>
 		<li>
 			<div class="flex-container">
 				<img src={settingsImage} alt="" />
@@ -31,12 +33,13 @@
 				<b> Exit </b>
 			</div>
 		</li>
-	</ul>
+	</ul> -->
 </body>
 
 <style>
 	body {
 		background-color: #001c41;
+		height: var(--inner-height);
 	}
 	.flex-container {
 		display: flex;
