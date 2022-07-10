@@ -3,11 +3,9 @@
 		'https://thumbs.dreamstime.com/b/man-hipster-avatar-cartoon-guy-black-hair-man-hipster-avatar-cartoon-guy-black-hair-flat-icon-blue-background-user-223717055.jpg';
 	export let unfoldImage =
 		'https://icon-library.com/images/hamburger-menu-icon-png-white/hamburger-menu-icon-png-white-14.jpg';
-	export function onClick() {
-		alert('clicked');
-	}
+	export let onClick;
 	$: innerWidth = 0;
-	$: fillWidth = innerWidth - 120;
+	$: fillWidth = innerWidth - 130;
 </script>
 
 <svelte:window bind:innerWidth />
@@ -15,7 +13,7 @@
 <div class="flex-container">
 	<img src={userImage} alt="" />
 	<div class="spacer" style="--fill-width: {fillWidth}px" />
-	<img src={unfoldImage} alt="" />
+	<img src={unfoldImage} alt="" on:click={onClick} />
 </div>
 
 <style>
@@ -25,12 +23,13 @@
 		border-radius: 17px;
 		padding: 4px;
 	}
-	div {
-		padding: 5px;
-	}
 	.flex-container {
 		display: flex;
 		flex-direction: row;
+		padding: 5px;
+		background-color: #001c41;
+		border-radius: 17px;
+		height: min-content;
 	}
 	.spacer {
 		width: var(--fill-width);
