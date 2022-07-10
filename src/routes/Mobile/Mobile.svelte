@@ -1,34 +1,25 @@
 <script>
 	import Content from './Content/Content.svelte';
-	import accordion from './accordion.js';
 	import TopMenu from './TopBar/TopMenu.svelte';
 	import TopList from './TopBar/TopList.svelte';
+	$: innerWidth = 0;
+	$: actualWidth = innerWidth - 20;
 </script>
 
-<details use:accordion>
-	<summary>
-		<TopMenu />
-	</summary>
-	<TopList />
-</details>
+<svelte:window bind:innerWidth />
+
+<div class="flex-container" style="--screen-height: {actualWidth}px">
+	<TopMenu />
+</div>
+
+<TopList />
 <Content />
 
 <style>
-	details {
-		background: #001c41;
-		height: var(--collapsed);
-		overflow: hidden;
-		transition: height 300ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
-		border-radius: 5px;
-	}
-	details[open] {
-		height: var(--expanded);
-	}
-	summary {
-		display: block;
-		padding-bottom: 0.5rem;
-		padding-top: 0.5rem;
-		padding-inline-end: 0.5rem;
-		padding-inline-start: 1rem;
+	div {
+		background-color: #001c41;
+		width: var(--screen-height);
+		border-radius: 17px;
+		height: min-content;
 	}
 </style>
