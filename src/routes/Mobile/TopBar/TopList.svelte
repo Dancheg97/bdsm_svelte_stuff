@@ -20,20 +20,14 @@
 		<div class="spacer" style="--fill-width: {fillWidth}px" />
 		<img src={unfoldImage} alt="" on:click={onClick} />
 	</div>
-	<!-- <ul>
-		<li>
-			<div class="flex-container">
-				<img src={settingsImage} alt="" />
-				<b> Settings </b>
-			</div>
-		</li>
-		<li>
-			<div class="flex-container">
-				<img src={exitImage} alt="" />
-				<b> Exit </b>
-			</div>
-		</li>
-	</ul> -->
+
+	<div class="flex-container">
+		<img src={settingsImage} alt="" />
+	</div>
+
+	<div class="flex-container">
+		<img src={exitImage} alt="" />
+	</div>
 </body>
 
 <style>
